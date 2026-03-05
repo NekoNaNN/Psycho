@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>她力量 · 心守护 | 研究生第十五党支部</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+  :root {
+    --red-deep: #B71C1C;
+    --red-primary: #C62828;
+    --red-medium: #D32F2F;
+    --red-light: #E57373;
+    --red-pale: #FFCDD2;
+    --red-bg: #FFEBEE;
+    --pink: #F48FB1;
+    --pink-light: #FCE4EC;
+    --pink-deep: #E91E63;
+    --gold: #D4A574;
+    --gold-light: #F5E6D3;
+    --dark: #2D2D2D;
+    --gray: #666;
+    --gray-light: #999;
+    --bg: #FDF6F0;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: #EDEDED;
+    color: var(--dark);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .article-wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--bg);
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--red-deep) 0%, var(--red-primary) 40%, #AD1457 100%);
+    padding: 56px 28px 44px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    right: -30%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(244,143,177,0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: floatBlob 8s ease-in-out infinite;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: -20%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255,205,210,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: floatBlob 10s ease-in-out infinite reverse;
+  }
+
+  @keyframes floatBlob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -30px) scale(1.1); }
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 4px 18px;
+    font-size: 11px;
+    color: var(--red-pale);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    animation: fadeSlideDown 0.8s ease-out;
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    animation: fadeSlideDown 0.8s ease-out 0.1s both;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    color: var(--red-pale);
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+    animation: fadeSlideDown 0.8s ease-out 0.2s both;
+  }
+
+  .hero-org {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 8px 16px;
+    animation: fadeSlideDown 0.8s ease-out 0.3s both;
+  }
+
+  .hero-org .party-icon {
+    width: 18px;
+    height: 18px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: var(--red-deep);
+    font-weight: 700;
+  }
+
+  .hero-org span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 1px;
+  }
+
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .wave-divider { margin-top: -1px; line-height: 0; }
+  .wave-divider svg { display: block; width: 100%; }
+
+  .content { padding: 0 24px; }
+
+  .opening { padding: 32px 0 20px; }
+
+  .opening .greeting {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--red-medium);
+    margin-bottom: 16px;
+  }
+
+  .opening p {
+    font-size: 14.5px;
+    color: var(--dark);
+    line-height: 2;
+    text-align: justify;
+    margin-bottom: 14px;
+  }
+
+  .opening p em {
+    font-style: normal;
+    color: var(--red-medium);
+    font-weight: 500;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 36px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--red-pale);
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--red-primary);
+  }
+
+  .section-title .icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--red-primary), var(--pink-deep));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    box-shadow: 0 3px 12px rgba(198,40,40,0.25);
+  }
+
+  .section-title h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 1px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 16px 0;
+  }
+
+  .data-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 18px 14px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    border: 1px solid rgba(198,40,40,0.06);
+    transition: transform 0.3s;
+  }
+
+  .data-card:hover { transform: translateY(-2px); }
+
+  .data-card .num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--red-primary);
+    line-height: 1.2;
+  }
+
+  .data-card .unit { font-size: 13px; color: var(--red-light); font-weight: 500; }
+  .data-card .desc { font-size: 11.5px; color: var(--gray); margin-top: 6px; line-height: 1.5; }
+
+  .quote-block {
+    margin: 24px 0;
+    padding: 16px 20px;
+    border-left: 3px solid var(--pink);
+    background: linear-gradient(135deg, var(--pink-light), rgba(252,228,236,0.3));
+    border-radius: 0 10px 10px 0;
+  }
+
+  .quote-block p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 14px;
+    color: var(--gray);
+    font-style: italic;
+    line-height: 1.9;
+  }
+
+  .problem-card {
+    background: var(--white);
+    border-radius: 14px;
+    margin: 14px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .problem-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+  }
+
+  .problem-num {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--red-primary), var(--red-medium));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .problem-card-header h3 { font-size: 15px; font-weight: 700; color: var(--dark); flex: 1; }
+  .problem-card-body { padding: 0 18px 16px; padding-left: 62px; }
+  .problem-card-body p { font-size: 13.5px; color: var(--gray); line-height: 1.9; }
+
+  .checklist {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 20px;
+    margin: 16px 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  }
+
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .check-item:last-child { border-bottom: none; }
+
+  .check-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--red-pale);
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .check-box.checked {
+    background: var(--red-primary);
+    border-color: var(--red-primary);
+  }
+
+  .check-box.checked::after {
+    content: '\2713';
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .check-item span { font-size: 13.5px; color: var(--dark); line-height: 1.7; }
+
+  .check-result {
+    margin-top: 16px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    display: none;
+    transition: all 0.3s;
+  }
+
+  .check-result.show { display: block; }
+
+  .check-note { margin-top: 12px; font-size: 12px; color: var(--gray-light); text-align: center; }
+
+  .method-card {
+    background: var(--white);
+    border-radius: 14px;
+    margin: 14px 0;
+    padding: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .method-card::before {
+    content: attr(data-num);
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: rgba(198,40,40,0.05);
+    line-height: 1;
+  }
+
+  .method-card .label {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--red-primary), var(--pink-deep));
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .method-card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .method-card p { font-size: 13.5px; color: var(--gray); line-height: 1.9; }
+
+  .resource-card {
+    background: var(--white);
+    border-radius: 14px;
+    margin: 12px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  }
+
+  .resource-header {
+    background: linear-gradient(135deg, var(--red-bg), var(--pink-light));
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .resource-header .emoji { font-size: 20px; }
+
+  .resource-header h4 { font-size: 14px; font-weight: 700; color: var(--red-primary); }
+
+  .resource-body { padding: 14px 18px; }
+  .resource-body p { font-size: 13px; color: var(--dark); line-height: 1.8; }
+  .resource-body .phone { color: var(--red-medium); font-weight: 600; font-size: 15px; }
+  .resource-body .time { font-size: 12px; color: var(--gray-light); }
+
+  .hotline-item {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+
+  .hotline-item:last-child { border-bottom: none; }
+  .hotline-name { font-size: 13px; color: var(--dark); font-weight: 500; margin-bottom: 2px; }
+  .hotline-link { font-size: 12.5px; color: var(--red-medium); word-break: break-all; }
+
+  .initiative-list { margin: 16px 0; }
+
+  .initiative-item {
+    display: flex;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    align-items: flex-start;
+  }
+
+  .initiative-item:last-child { border-bottom: none; }
+
+  .initiative-star {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--gold), #E8B98A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(212,165,116,0.3);
+  }
+
+  .initiative-item .text { font-size: 14px; color: var(--dark); line-height: 1.8; }
+  .initiative-item .text strong { color: var(--red-primary); }
+
+  .closing {
+    margin: 40px 0 32px;
+    padding: 32px 24px;
+    background: linear-gradient(135deg, var(--pink-light), #FFF0F5, var(--gold-light));
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .closing::before {
+    content: '\201C';
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-family: Georgia, serif;
+    font-size: 60px;
+    color: var(--pink);
+    opacity: 0.5;
+    line-height: 1;
+  }
+
+  .closing p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    color: var(--red-medium);
+    line-height: 2.2;
+    position: relative;
+  }
+
+  .closing p.bold {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--red-primary);
+    margin-top: 8px;
+  }
+
+  .signature { text-align: right; padding: 20px 0 32px; }
+  .signature p { font-size: 14px; color: var(--dark); line-height: 2; }
+  .signature .org { font-weight: 700; color: var(--red-primary); }
+  .signature .date { font-size: 13px; color: var(--gray-light); }
+
+  .footer {
+    background: linear-gradient(135deg, var(--red-deep), var(--red-primary));
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .footer .credits { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 12px; }
+
+  .footer .cta {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 8px 24px;
+    font-size: 13px;
+    color: var(--white);
+    letter-spacing: 2px;
+  }
+
+  .body-text {
+    font-size: 14.5px;
+    color: var(--dark);
+    line-height: 2;
+    text-align: justify;
+    margin: 12px 0;
+  }
+
+  .body-text em { font-style: normal; color: var(--red-medium); font-weight: 500; }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  .separator {
+    text-align: center;
+    margin: 28px 0;
+    color: var(--red-pale);
+    font-size: 14px;
+    letter-spacing: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="article-wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">Women's Day Special</div>
+    <h1 class="hero-title">她力量 · 心守护</h1>
+    <p class="hero-subtitle">—— 关注女性医学生心理健康 ——</p>
+    <div class="hero-org">
+      <div class="party-icon">☆</div>
+      <span>研究生第十五党支部 · 三八妇女节特别策划</span>
+    </div>
+  </div>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" style="height:30px;">
+      <path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#FDF6F0"/>
+    </svg>
+  </div>
+
+  <div class="content">
+
+    <!-- OPENING -->
+    <div class="opening fade-in">
+      <p class="greeting">亲爱的姐妹们：</p>
+      <p>在第116个"三八"国际妇女节到来之际，浙江大学医学院附属第一医院第十五党支部向每一位在医学道路上奋力前行的女性致以最温暖的节日问候！</p>
+      <p>医学之路漫漫而崇高，而作为女性医学生的你们，既要面对繁重的学业压力，又要应对社会角色的多重期待。今天，让我们放慢脚步，一起聊聊那些不常被提起却至关重要的话题——<em>心理健康</em>。</p>
+    </div>
+
+    <div class="separator">✦ ✦ ✦</div>
+
+    <!-- SECTION 1 -->
+    <div class="section-title fade-in">
+      <div class="icon">📊</div>
+      <h2>女性医学生心理健康现状</h2>
+    </div>
+
+    <p class="body-text fade-in">多项研究显示，医学生群体的心理健康问题不容忽视，而女性医学生由于生理、社会和文化等多重因素，面临更为突出的心理健康挑战。</p>
+
+    <div class="data-grid fade-in">
+      <div class="data-card">
+        <div class="num">10-15<span class="unit">%</span></div>
+        <div class="desc">女性医学生情绪困扰发生率高出男性同行</div>
+      </div>
+      <div class="data-card">
+        <div class="num">60<span class="unit">%+</span></div>
+        <div class="desc">女性医学生曾因学业压力出现睡眠问题</div>
+      </div>
+      <div class="data-card">
+        <div class="num">↑</div>
+        <div class="desc">医学生焦虑抑郁检出率显著高于普通大学生</div>
+      </div>
+      <div class="data-card">
+        <div class="num">⚠️</div>
+        <div class="desc">研究生阶段为女性心理问题高发期</div>
+      </div>
+    </div>
+
+    <div class="quote-block fade-in">
+      <p>"她们总是在照顾别人，却常常忘了照顾自己。"</p>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-title fade-in">
+      <div class="icon">🧠</div>
+      <h2>那些"隐形"的心理困扰</h2>
+    </div>
+
+    <p class="body-text fade-in">以下是女性医学生中常见的心理健康问题，你或身边的同学是否正在经历呢？</p>
+
+    <div class="problem-card fade-in">
+      <div class="problem-card-header">
+        <div class="problem-num">1</div>
+        <h3>"完美主义陷阱"</h3>
+      </div>
+      <div class="problem-card-body">
+        <p>对自我要求极高，一次考试失利就否定全部努力。害怕犯错、害怕不够好，内心始终处于紧绷状态。</p>
+      </div>
+    </div>
+
+    <div class="problem-card fade-in">
+      <div class="problem-card-header">
+        <div class="problem-num">2</div>
+        <h3>"冒充者综合征"</h3>
+      </div>
+      <div class="problem-card-body">
+        <p>明明成绩优异，却总觉得自己"不够格""只是运气好"。女性更容易低估自己的能力和成就。</p>
+      </div>
+    </div>
+
+    <div class="problem-card fade-in">
+      <div class="problem-card-header">
+        <div class="problem-num">3</div>
+        <h3>"情绪性疲劳"</h3>
+      </div>
+      <div class="problem-card-body">
+        <p>长期处于高压环境中，感到身心俱疲。对曾经热爱的事物逐渐失去兴趣，出现职业倦怠的早期信号。</p>
+      </div>
+    </div>
+
+    <div class="problem-card fade-in">
+      <div class="problem-card-header">
+        <div class="problem-num">4</div>
+        <h3>"社会时钟焦虑"</h3>
+      </div>
+      <div class="problem-card-body">
+        <p>来自家庭和社会的婚恋、生育期待与漫长的医学培养周期之间的冲突，带来独特的身份焦虑。</p>
+      </div>
+    </div>
+
+    <div class="problem-card fade-in">
+      <div class="problem-card-header">
+        <div class="problem-num">5</div>
+        <h3>"隐性歧视压力"</h3>
+      </div>
+      <div class="problem-card-body">
+        <p>在某些学科领域面临性别偏见，被质疑能力，需要付出更多努力来证明自己，产生额外的心理负担。</p>
+      </div>
+    </div>
+
+    <div class="separator">✦ ✦ ✦</div>
+
+    <!-- SECTION 3 -->
+    <div class="section-title fade-in">
+      <div class="icon">✅</div>
+      <h2>快速心理健康自测</h2>
+    </div>
+
+    <p class="body-text fade-in">根据<em>最近两周</em>的感受，点选符合你状况的选项：</p>
+
+    <div class="checklist fade-in" id="checklist">
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <span>经常感到紧张、焦虑或坐立不安</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <span>难以控制地担忧各种事情</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <span>入睡困难或睡眠质量明显下降</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <span>对以前感兴趣的事物失去热情</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <span>经常感到疲惫，即使休息后也无法恢复</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <span>出现注意力不集中、记忆力下降</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <span>食欲明显改变（暴食或食欲减退）</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <span>常常感到自我价值感低落或自我否定</span>
+      </div>
+      <div class="check-result" id="checkResult"></div>
+      <p class="check-note">⚠️ 此测评仅为初步筛查，不能替代专业诊断</p>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section-title fade-in">
+      <div class="icon">🌿</div>
+      <h2>六个科学实用的调适方法</h2>
+    </div>
+
+    <div class="method-card fade-in" data-num="01">
+      <div class="label">方法一</div>
+      <h3>正念呼吸法</h3>
+      <p>每天花5–10分钟进行深呼吸练习。吸气4秒—屏气4秒—呼气6秒。这一简单技巧已被大量研究证实可有效降低皮质醇水平，缓解焦虑情绪。</p>
+    </div>
+
+    <div class="method-card fade-in" data-num="02">
+      <div class="label">方法二</div>
+      <h3>运动处方</h3>
+      <p>世界卫生组织建议每周至少150分钟中等强度有氧运动。跑步、游泳、瑜伽都是不错的选择。运动能促进内啡肽和血清素分泌，是天然的"抗抑郁药"。</p>
+    </div>
+
+    <div class="method-card fade-in" data-num="03">
+      <div class="label">方法三</div>
+      <h3>社交联结</h3>
+      <p>主动与信任的朋友、家人保持联系。研究表明，高质量的社交支持是抵御心理困扰最有效的保护因素之一。不要独自承受压力。</p>
+    </div>
+
+    <div class="method-card fade-in" data-num="04">
+      <div class="label">方法四</div>
+      <h3>认知重构</h3>
+      <p>当消极想法出现时，尝试问自己："这个想法有证据支持吗？""如果好朋友遇到同样的情况，我会怎么对她说？"学会用更客观、温和的方式看待自己。</p>
+    </div>
+
+    <div class="method-card fade-in" data-num="05">
+      <div class="label">方法五</div>
+      <h3>时间管理</h3>
+      <p>使用"番茄工作法"或任务优先级矩阵，避免"全天候学习"模式。设定明确的学习与休息边界，保障充足的睡眠时间（每晚7–8小时）。</p>
+    </div>
+
+    <div class="method-card fade-in" data-num="06">
+      <div class="label">方法六</div>
+      <h3>表达性写作</h3>
+      <p>每天花10–15分钟把内心感受写下来（不必追求文采）。心理学研究发现，表达性写作能有效降低负面情绪反刍，增强自我认知。</p>
+    </div>
+
+    <div class="separator">✦ ✦ ✦</div>
+
+    <!-- SECTION 5 -->
+    <div class="section-title fade-in">
+      <div class="icon">💜</div>
+      <h2>寻求帮助是勇敢的表现</h2>
+    </div>
+
+    <div class="quote-block fade-in">
+      <p>"寻求帮助是力量的体现，不是脆弱的表现。正如我们鼓励患者及时就医一样，我们也应该对自己的心理健康同样重视。"</p>
+    </div>
+
+    <p class="body-text fade-in">当自我调节无法缓解困扰时，请勇敢迈出求助的步伐。以下资源随时为你提供支持：</p>
+
+    <div class="resource-card fade-in">
+      <div class="resource-header">
+        <span class="emoji">🏥</span>
+        <h4>校内心理咨询中心</h4>
+      </div>
+      <div class="resource-body">
+        <p>在杭校区可通过官网预约心理咨询</p>
+        <p class="hotline-link">www.xlzx.zju.edu.cn</p>
+        <p style="margin-top:4px">或拨打电话预约：</p>
+        <p class="phone">0571-88982525</p>
+      </div>
+    </div>
+
+    <div class="resource-card fade-in">
+      <div class="resource-header">
+        <span class="emoji">📞</span>
+        <h4>心理热线</h4>
+      </div>
+      <div class="resource-body">
+        <div class="hotline-item">
+          <p class="hotline-name">1. 浙江省统一心理援助热线</p>
+          <p class="phone">96525</p>
+          <p class="time">24小时</p>
+        </div>
+        <div class="hotline-item">
+          <p class="hotline-name">2. 杭州市心理危机干预热线</p>
+          <p class="phone">0571-85029595</p>
+          <p class="time">24小时</p>
+        </div>
+        <div class="hotline-item">
+          <p class="hotline-name">3. 北京心理危机干预中心</p>
+          <p class="phone">010-82951332</p>
+          <p class="time">手机可拨打</p>
+        </div>
+        <div class="hotline-item">
+          <p class="hotline-name">4. 浙江省高校大学生心理援助热线</p>
+          <p class="phone">0571-85109955</p>
+          <p class="time">9:00–21:00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-card fade-in">
+      <div class="resource-header">
+        <span class="emoji">🤝</span>
+        <h4>朋辈支持</h4>
+      </div>
+      <div class="resource-body">
+        <p>班级心理委员</p>
+        <p>心理相关主题团辅</p>
+        <p class="time">关注公众号了解相关活动安排</p>
+      </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="section-title fade-in">
+      <div class="icon">🏵️</div>
+      <h2>研究生第十五党支部"她力量"关爱倡议</h2>
+    </div>
+
+    <p class="body-text fade-in">浙江大学医学院附属第一医院第十五党支部始终坚持以人为本的理念，将女性医学生的身心健康放在重要位置。在此三八妇女节之际，我们郑重发出以下倡议：</p>
+
+    <div class="initiative-list fade-in">
+      <div class="initiative-item">
+        <div class="initiative-star">✨</div>
+        <div class="text"><strong>关爱自己</strong> —— 定期进行心理健康自评，主动识别压力信号</div>
+      </div>
+      <div class="initiative-item">
+        <div class="initiative-star">✨</div>
+        <div class="text"><strong>互助守望</strong> —— 关注身边同学的情绪变化，做彼此的"心理守护者"</div>
+      </div>
+      <div class="initiative-item">
+        <div class="initiative-star">✨</div>
+        <div class="text"><strong>勇敢发声</strong> —— 面对不公正待遇时敢于表达，维护自身权益</div>
+      </div>
+      <div class="initiative-item">
+        <div class="initiative-star">✨</div>
+        <div class="text"><strong>科学调适</strong> —— 学习并运用科学的心理调节方法，提升心理韧性</div>
+      </div>
+      <div class="initiative-item">
+        <div class="initiative-star">✨</div>
+        <div class="text"><strong>平衡发展</strong> —— 在追求学术卓越的同时，不忘生活的丰富与美好</div>
+      </div>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="closing fade-in">
+      <p>愿每一位在医学之路上奔跑的你，</p>
+      <p>都能被温柔以待，也能温柔待己。</p>
+      <p class="bold">你值得被看见，你值得被关爱。</p>
+    </div>
+
+    <div class="signature fade-in">
+      <p>浙江大学医学院附属第一医院</p>
+      <p class="org">研究生第十五党支部</p>
+      <p class="date">2026年3月8日</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p class="credits">编辑 | 研究生第十五党支部 &nbsp;&nbsp; 审核 | 闻优瑜</p>
+    <div class="cta">长按关注 · 浙一教学平台</div>
+  </div>
+
+</div>
+
+<script>
+  function toggleCheck(item) {
+    var box = item.querySelector('.check-box');
+    box.classList.toggle('checked');
+    updateResult();
+  }
+
+  function updateResult() {
+    var checked = document.querySelectorAll('.check-box.checked').length;
+    var result = document.getElementById('checkResult');
+    if (checked === 0) {
+      result.classList.remove('show');
+      return;
+    }
+    result.classList.add('show');
+    if (checked < 3) {
+      result.textContent = '\u5DF2\u9009 ' + checked + ' \u9879 \u2014 \u76EE\u524D\u72B6\u6001\u826F\u597D\uFF0C\u8BF7\u7EE7\u7EED\u4FDD\u6301\u5065\u5EB7\u7684\u751F\u6D3B\u65B9\u5F0F \uD83D\uDC9A';
+      result.style.background = '#E8F5E9';
+      result.style.color = '#2E7D32';
+    } else if (checked < 5) {
+      result.textContent = '\u5DF2\u9009 ' + checked + ' \u9879 \u2014 \u5EFA\u8BAE\u5173\u6CE8\u81EA\u8EAB\u5FC3\u7406\u72B6\u6001\uFF0C\u5C1D\u8BD5\u6587\u4E2D\u8C03\u9002\u65B9\u6CD5 \uD83D\uDC9B';
+      result.style.background = '#FFF8E1';
+      result.style.color = '#F57F17';
+    } else {
+      result.textContent = '\u5DF2\u9009 ' + checked + ' \u9879 \u2014 \u5EFA\u8BAE\u53CA\u65F6\u5BFB\u6C42\u4E13\u4E1A\u5E2E\u52A9\uFF0C\u4F60\u4E0D\u5FC5\u72EC\u81EA\u627F\u53D7 \uD83D\uDC9C';
+      result.style.background = '#FFEBEE';
+      result.style.color = '#C62828';
+    }
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>
